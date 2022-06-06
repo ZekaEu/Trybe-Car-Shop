@@ -23,4 +23,7 @@ export default class CarService extends Service<Car> {
     if (!parsed.success) return { error: parsed.error };
     return this.model.update(id, obj);
   };
+
+  delete = async (id: string): Promise<Car | ServiceError | null> =>
+    this.model.delete(id);
 }
