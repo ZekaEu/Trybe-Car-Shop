@@ -12,4 +12,6 @@ export default class CarService extends Service<Car> {
     if (!parsed.success) return { error: parsed.error };
     return this.model.create(obj);
   };
+
+  read = async (): Promise<Car[]> => this.model.read();
 }
