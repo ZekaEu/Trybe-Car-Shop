@@ -11,6 +11,8 @@ export interface RequestWithBody<T> extends Request {
 
 enum ControllerErrors {
   internal = 'Internal Server Error',
+  notFound = 'Object not found',
+  invalidId = 'Id must have 24 hexadecimal characters',
 }
 
 export default abstract class Controller<T> {
@@ -28,5 +30,10 @@ export default abstract class Controller<T> {
   abstract read(
     _req: Request,
     res: Response<T[] | ResponseError>,
+  ): Promise<typeof res>;
+
+  abstract readOne(
+    req: RequestWithBody<{ id: string }>,
+    res: Response<T | ResponseError>,
   ): Promise<typeof res>;
 }
