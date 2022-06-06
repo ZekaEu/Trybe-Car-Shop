@@ -2,7 +2,7 @@ import { expect } from 'chai';
 import * as sinon from 'sinon';
 import CarModel from '../../../models/CarModel';
 import CarService from '../../../services/CarService';
-import { carMock, carArrMock, invalidCarMock } from '../../mocks';
+import { carMock, carArrMock } from '../../mocks';
 
 const carModel = new CarModel();
 const carService = new CarService(carModel);

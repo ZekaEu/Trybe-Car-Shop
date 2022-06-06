@@ -7,15 +7,6 @@ export const carMock = {
   seatsQty: 5
 };
 
-export const invalidCarMock = {
-  model: 'Corolla',
-  year: 2003,
-  color: 'black',
-  buyValue: 20000,
-  doorsQty: 4,
-  seatsQty: 5
-};
-
 export const carArrMock = [
   {
     model: 'Corolla',
